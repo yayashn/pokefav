@@ -1,7 +1,12 @@
-import motor.motor_asyncio
 from model import User
+import motor.motor_asyncio
+from dotenv import dotenv_values
+import os
 
-client = motor.motor_asyncio.AsyncIOMotorClient('mongodb://localhost:27017/')
+config = dotenv_values(".env")
+DATABASE_URI = config.get("DATABASE_URI")
+if os.getenv("DATABASE_URI"): DATABASE_URI = os.getenv("DATABASE_URI")
+client = motor.motor_asyncio.AsyncIOMotorClient(DATABASE_URI)
 database = client.Users
 collection = database.user
 

@@ -4,9 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+python-dotenv = "*"
 fastapi = "==0.65.1"
 uvicorn = "==0.14.0"
 motor = "==2.4.0"
+gunicorn = "==20.1.0"
+pymongo = {version = "==3.12.0", extras = ["srv"]}
 
 [dev-packages]
 

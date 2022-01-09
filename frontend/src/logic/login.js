@@ -3,7 +3,7 @@ import axios from "axios";
 export default props => {
     const {username, password, setUser, setLoginColour, setError, setMessage, navigate} = props;
     
-    axios.get(`http://localhost:8000/api/users/${username}`)
+    axios.get(`https://yayapokefav.herokuapp.com/api/users/${username}`)
     .then(res => {
       if(res.data.password == password) {
           setUser(res.data);
