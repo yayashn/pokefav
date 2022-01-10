@@ -1,4 +1,6 @@
 from fastapi import FastAPI, HTTPException
+from starlette.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from model import User
 
@@ -8,11 +10,13 @@ from database import (
     update_user_pokemon,
 )
 
-from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
+app.mount("/", StaticFiles(directory="dist"), name="static")
+
 origins = [
-    "*",
+    "http://yayashn.github.io",
+    "https://yayashn.github.io",
 ]
 
 app.add_middleware(
@@ -22,10 +26,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-@app.get("/")
-async def read_root():
-    return {"Hello": "World"}
 
 @app.get("/api/users/{username}", response_model=User)
 async def get_user_by_username(username):
