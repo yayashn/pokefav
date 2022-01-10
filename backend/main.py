@@ -12,7 +12,7 @@ from database import (
 
 app = FastAPI()
 
-app.mount("/", StaticFiles(directory="dist"), name="static")
+app.mount("/app", StaticFiles(directory="dist"), name="static")
 
 origins = [
     "http://yayashn.github.io",
