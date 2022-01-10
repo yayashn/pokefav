@@ -31,7 +31,7 @@ export default () => {
         <Logout
         onClick={()=>{
             localStorage.clear();
-            navigate('/login')
+            navigate('/')
         }}
         whileTap="clicked" 
         whileHover="hover"

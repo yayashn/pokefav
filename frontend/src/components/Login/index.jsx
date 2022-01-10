@@ -1,6 +1,5 @@
 import { useContext, useState } from 'react';
-import { useNavigate } from "react-router-dom";
-import axios from 'axios';
+import { Navigate, useNavigate } from "react-router-dom";
 import Login, { Input, ButtonContainer, Message } from './styles';
 import Button from './Button';
 import UserContext from '../../contexts/UserContext';
@@ -50,6 +49,8 @@ export default () => {
     }
 
     return (
+        <>
+        {localStorage.getItem('user') && <Navigate to="/profile" replace/>}
         <Login
         variants={pageVariants}
         initial="exit"
@@ -94,5 +95,6 @@ export default () => {
             </ButtonContainer>
             <Message error={error}>{message}</Message>
         </Login>
+        </>
     )
 }

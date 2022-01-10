@@ -7,7 +7,7 @@ export default createGlobalStyle`
       font-weight: 400;
       src: local('Pokemon Solid'), url('https://fonts.cdnfonts.com/s/17890/Pokemon Solid.woff') format('woff');
   }
-  
+
   * {
     font-family: Arial;
     font-weight: 100;

@@ -8,7 +8,7 @@ export default props => {
         "password": password,
         "pokemon": "pikachu"
     }
-    axios.post(`https://yayapokefav.herokuapp.com/api/users/`, data)
+    axios.post(`https://ypokefav.herokuapp.com/api/users/`, data)
     .then(res => {
         setRegisterColour('rgb(0, 208, 0)');
         setError(false);

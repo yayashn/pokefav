@@ -1,13 +1,13 @@
 {
   "name": "pokefav",
   "version": "0.0.1",
-  "homepage": "https://yayashn.github.io/pokefav",
+  "homepage": "https://yayashn.github.io/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "set \"INLINE_RUNTIME_CHUNK=false\" && vite build",
     "preview": "vite preview",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d distgit re"
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "axios": "^0.24.0",

@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Styles from './Styles';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
-  Navigate,
   useLocation
 } from 'react-router-dom';
 import Login from './components/Login/index';
@@ -34,18 +33,9 @@ const App = () => {
     <UserContext.Provider value={[user, setUser, image, setImage]}>
     <AnimatePresence>
       <Routes location={location} key={location.key}>
-        <Route path="/" element={<Navigate replace 
-        to={localStorage.getItem('user') ? '/profile' : '/login'}/>}/>
-        <Route path="/login" element={<Login/>}>
-        </Route>
-        <Route path="/profile" element={<>
-          <Profile/>
-          <Logout/>
-        </>}></Route>
-        <Route path="/pokemon" element={<>
-          <Pokemon/>
-          <Logout/>
-        </>}></Route>
+        <Route path="/" element={<Login/>}></Route>
+        <Route path="/profile" element={<><Profile/><Logout/></>}></Route>
+        <Route path="/pokemon" element={<><Pokemon/><Logout/></>}></Route>
       </Routes>
     </AnimatePresence>
     </UserContext.Provider>
