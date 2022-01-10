@@ -5,7 +5,7 @@ import{W as V,s as a,m as g,r as s,j as p,a as t,b,u as w,R as B,c as F,H as O,d
       font-weight: 400;
       src: local('Pokemon Solid'), url('https://fonts.cdnfonts.com/s/17890/Pokemon Solid.woff') format('woff');
   }
-  
+
   * {
     font-family: Arial;
     font-weight: 100;
@@ -45,6 +45,10 @@ import{W as V,s as a,m as g,r as s,j as p,a as t,b,u as w,R as B,c as F,H as O,d
     align-items: center;
     flex-direction: column;
   }
+
+  #root:nth-child(3) {
+    display: none;
+  }
 `,G=a(g.form)`
     background: white;
     max-width: 350px;
@@ -65,7 +69,6 @@ import{W as V,s as a,m as g,r as s,j as p,a as t,b,u as w,R as B,c as F,H as O,d
         margin-top: 11%;
     }
     position: relative;
-    ${e=>e.visible!=!0&&"display: none"};
 `;const T=a.input`
     width: 70%;
     height: 40px;
@@ -292,4 +295,4 @@ import{W as V,s as a,m as g,r as s,j as p,a as t,b,u as w,R as B,c as F,H as O,d
     position: fixed;
     bottom: 20px;
     left: 20px;
-`,Ve={clicked:{scale:.8},hover:{scale:1.2}};var R=()=>{const e=w();return t(Re,{onClick:()=>{localStorage.clear(),e("/login")},whileTap:"clicked",whileHover:"hover",variants:Ve})};const Be={login:{fontSize:80},profile:{fontSize:40}},Fe=()=>{const[e,r]=s.exports.useState(),[n,c]=s.exports.useState(""),o=j();return t(I.Provider,{value:[e,r,n,c],children:t(N,{children:p(H,{location:o,children:[t(S,{path:"/",element:t(D,{replace:!0,to:localStorage.getItem("user")?"/profile":"/login"})}),t(S,{path:"/login",element:t(te,{visible:!0})}),t(S,{path:"/profile",element:p(E,{children:[t(ce,{}),t(R,{})]})}),t(S,{path:"/pokemon",element:p(E,{children:[t(Ue,{}),t(R,{})]})})]},o.key)})})};B.render(p(F.StrictMode,{children:[t(K,{}),t(le,{variants:Be,initial:"login",children:"PokeFAV"}),t(O,{children:t(Fe,{})})]}),document.getElementById("root"));
+`,Ve={clicked:{scale:.8},hover:{scale:1.2}};var R=()=>{const e=w();return t(Re,{onClick:()=>{localStorage.clear(),e("/login")},whileTap:"clicked",whileHover:"hover",variants:Ve})};const Be={login:{fontSize:80},profile:{fontSize:40}},Fe=()=>{const[e,r]=s.exports.useState(),[n,c]=s.exports.useState(""),o=j();return t(I.Provider,{value:[e,r,n,c],children:t(N,{children:p(H,{location:o,children:[t(S,{path:"/",element:t(D,{replace:!0,to:localStorage.getItem("user")?"/profile":"/login"})}),t(S,{path:"/login",element:t(te,{})}),t(S,{path:"/profile",element:p(E,{children:[t(ce,{}),t(R,{})]})}),t(S,{path:"/pokemon",element:p(E,{children:[t(Ue,{}),t(R,{})]})})]},o.key)})})};B.render(p(F.StrictMode,{children:[t(K,{}),t(le,{variants:Be,initial:"login",children:"PokeFAV"}),t(O,{children:t(Fe,{})})]}),document.getElementById("root"));
