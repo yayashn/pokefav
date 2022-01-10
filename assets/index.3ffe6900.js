@@ -46,7 +46,7 @@ import{W as V,s as a,m as g,r as s,j as p,a as t,b,u as w,R as B,c as F,H as O,d
     flex-direction: column;
   }
 
-  form:nth-of-type(2) {
+  form:nth-of-type(1) {
     display: none;
   }
 `,G=a(g.form)`
