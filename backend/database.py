@@ -4,9 +4,9 @@ from dotenv import dotenv_values
 import os
 
 config = dotenv_values(".env")
-DATABASE_URI = config.get("DATABASE_URI")
-if os.getenv("DATABASE_URI"): DATABASE_URI = os.getenv("DATABASE_URI")
-client = motor.motor_asyncio.AsyncIOMotorClient(DATABASE_URI)
+MONGODB_URI = config.get("MONGODB_URI")
+if os.getenv("MONGODB_URI"): MONGODB_URI = os.getenv("MONGODB_URI")
+client = motor.motor_asyncio.AsyncIOMotorClient(MONGODB_URI)
 database = client.Users
 collection = database.user
 

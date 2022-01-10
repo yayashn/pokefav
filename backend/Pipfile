@@ -11,6 +11,7 @@ motor = "==2.4.0"
 gunicorn = "==20.1.0"
 pymongo = {version = "==3.12.0", extras = ["srv"]}
 aiofiles = "*"
+jinja2 = "*"
 
 [dev-packages]
 
