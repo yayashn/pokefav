@@ -1,4 +1,4 @@
-<h1>pokefav</h1>
+<h1>pokefav - React, FastAPI, MongoDB, Heroku</h1>
 http://ypokefav.herokuapp.com/app
 
 <p>
