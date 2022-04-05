@@ -1,5 +1,4 @@
 <h1>pokefav - React, FastAPI, MongoDB, Heroku</h1>
-http://ypokefav.herokuapp.com/app
 
 <p>
   An interview task requiring the creation of an application which allows logging in/signing up and choose your favourite Pokemon.
