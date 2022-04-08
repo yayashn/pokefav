@@ -2,6 +2,7 @@
 
 <p>
   An interview task requiring the creation of an application which allows logging in/signing up and choose your favourite Pokemon.
+  https://pokefav.herokuapp.com/app
 </p>
 
 <h2>About the task</h2>
